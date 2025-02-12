@@ -1,0 +1,13 @@
+name: Simple Workflow
+
+on: [push]  # Runs on every push to the repository
+
+jobs:
+  test-job:
+    runs-on: ubuntu-latest  # Use the latest Ubuntu runner
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4  # Fetches your repository code
+
+      - name: Run a simple command
+        run: echo "Hello from GitHub Actions!"
